@@ -21,5 +21,9 @@ async def suma(ctx,n1:int,n2:int):
     """Esta función suma dos números enteros y devuelve el resultado."""
     resultado = n1 + n2
     await ctx.send(f"La suma de {n1} y {n2} es {resultado}")
+@bot.command()
+async def limpiar(ctx):
+    await ctx.channel.purge()
+    await ctx.send("Mensajes eliminados", delete_after = 3)
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN)
