@@ -29,6 +29,7 @@ async def limpiar(ctx):
 async def resta(ctx,n1:int,n2:int):
     """Esta función suma dos números enteros y devuelve el resultado."""
     resultado1 = n1 - n2
+    await ctx.send(f"La resta de {n1} y {n2} es {resultado1}")
 
 webserver.keep_alive()
 bot.run(DISCORD_TOKEN)
